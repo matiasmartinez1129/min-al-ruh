@@ -23,3 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Pantalla de ingreso con inicio automático de música
+const entryScreen = document.getElementById("entry-screen");
+const bgMusic = document.getElementById("bg-music");
+
+entryScreen.addEventListener("click", () => {
+  entryScreen.classList.add("hide");
+
+  setTimeout(() => {
+    entryScreen.style.display = "none";
+    bgMusic.play().catch(e => console.log("Autoplay bloqueado:", e));
+  }, 600);
+});
