@@ -1,7 +1,7 @@
 const entryScreen = document.getElementById("entry-screen");
 const bgMusic = document.getElementById("bg-music");
 
-// INTENTO SEGURO PARA MÓVILES
+
 function startMusic() {
     bgMusic.muted = false;
 
@@ -12,7 +12,6 @@ function startMusic() {
         .catch(err => {
             console.warn("⚠ El navegador bloqueó el autoplay, reintentando…", err);
 
-            // Reintento forzado
             setTimeout(() => {
                 bgMusic.play().catch(e => {
                     console.error("❌ No se pudo reproducir la música", e);
@@ -21,7 +20,7 @@ function startMusic() {
         });
 }
 
-// AL ENTRAR A LA PÁGINA
+
 entryScreen.addEventListener("click", () => {
     entryScreen.classList.add("fade-out");
 

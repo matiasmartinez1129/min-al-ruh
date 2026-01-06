@@ -1,4 +1,4 @@
-// MENU HAMBURGUESA
+
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 
@@ -7,7 +7,7 @@ hamburger.addEventListener("click", () => {
 
 });
 
-// LIGHTBOX PARA FOTOS
+
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
@@ -24,7 +24,7 @@ lightbox.addEventListener("click", () => {
 
 
 
- // HEADER SCROLL
+
   window.addEventListener("scroll", () => {
     const header = document.getElementById("header");
     header.classList.toggle("scrolled", window.scrollY > 50);
